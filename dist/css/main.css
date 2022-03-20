@@ -1,0 +1,75 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  color: white;
+  background-color: #121417;
+}
+
+.star-container img {
+  background-color: #7c8798;
+}
+
+.inner-text {
+  background-color: #252d37;
+  width: 20em;
+  line-height: 1.3em;
+}
+
+.button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button_container button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #7c8798;
+  color: white;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.button_submit {
+  border: none;
+  color: white;
+  background-color: #fb7413;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
