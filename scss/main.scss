@@ -33,10 +33,9 @@ body {
   flex-direction: column;
 }
 
-.content > h2 {
-  margin-top: 40px;
-  font-weight: map-get($fontWeight, "bold");
-  letter-spacing: 0px;
+.header {
+    margin-top: 30px;
+    font-weight: map-get($fontWeight, "bold");
 }
 
 .content > p {
@@ -52,8 +51,8 @@ body {
 
 .star-container,
 .rating {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
@@ -62,7 +61,7 @@ body {
 }
 
 .button-flex {
-  margin: 20px 0;
+  margin: 25px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -75,8 +74,9 @@ body {
   outline: none;
 }
 
-.raing:hover {
+.rating:hover {
   background-color: $lightGrey;
+  transition: 250ms;
 }
 
 .submit-button {
@@ -84,12 +84,18 @@ body {
   color: $white;
   border: none;
   border-radius: 15%/100%;
-  margin-top: 25px;
-  padding: 10px 0;
+  margin-top: 5px;
+  padding: 15px 0;
   text-transform: uppercase;
   cursor: pointer;
 }
 
+.submit-button:hover {
+    background-color: $white;
+    color: $primary;
+    transition: 250ms;
+}
+
 .thank-you-state {
-  display: none;
+    display: none;
 }

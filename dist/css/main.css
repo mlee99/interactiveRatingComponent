@@ -71,10 +71,9 @@ body {
           flex-direction: column;
 }
 
-.content > h2 {
-  margin-top: 40px;
+.header {
+  margin-top: 30px;
   font-weight: 700;
-  letter-spacing: 0px;
 }
 
 .content > p {
@@ -94,8 +93,8 @@ body {
 
 .star-container,
 .rating {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
@@ -104,7 +103,7 @@ body {
 }
 
 .button-flex {
-  margin: 20px 0;
+  margin: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,8 +120,10 @@ body {
   outline: none;
 }
 
-.raing:hover {
+.rating:hover {
   background-color: #959eac;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 .submit-button {
@@ -130,10 +131,17 @@ body {
   color: white;
   border: none;
   border-radius: 15%/100%;
-  margin-top: 25px;
-  padding: 10px 0;
+  margin-top: 5px;
+  padding: 15px 0;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: #fb7413;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 .thank-you-state {
