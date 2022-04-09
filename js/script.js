@@ -1,53 +1,50 @@
-let appRating = () => {
-    let selection = 0;
+const appRating = () => {
+  const btnSeleciton = () => {
+    let allBtns = document.querySelectorAll(".rating");
+    let lastBtn;
 
-    let btnOne = document.querySelector('#one')
-    console.log('btnOne')
+    allBtns.forEach(option => {
+      option.addEventListener("click", function () {
+        lastBtn && (lastBtn.style.backgroundColor = null);
+        (lastBtn = option).style.backgroundColor = "hsl(25,97%,53%)";
+        console.log(option.innerText);
+      });
+    });
 
-    let ratingSelection = () => {
-        let youSelected = document.querySelector('.you-selected')
-        let btnOne = document.querySelector('.rating .one');
-        console.log('btnOne')
-        let btnTwo = document.querySelector('#two');
-        let btnThree = document.querySelector('#three');
-        let btnFour = document.querySelector('#four');
-        let btnFive = document.querySelector('#five');
-        let ratingOption = [btnOne, btnTwo, btnThree, btnFour, btnFive]
+    submitButton(allBtns);
+  };
 
-        ratingOption.forEach(option => {
-            option.addEventListener("click", function () {
-                youSelected.textContent = `You selected ${selection} out of 5.`;
-          })
-        });
+  btnSeleciton();
 
-        // switch (selection) {
-        //     case 1:
-        //         youSelected = `You selected ${selection} out of 5.`;
-        //         break;
-        //     case 2:
-        //         youSelected = `You selected ${selection} out of 5.`;
-        //         break;
-        //     case 3:
-        //         youSelected = `You selected ${selection} out of 5.`;
-        //         break;
-        //     case 4:
-        //         youSelected = `You selected ${selection} out of 5.`;
-        //         break;
-        //     case 5:
-        //         youSelected = `You selected ${selection} out of 5.`;
-        //         break;
-        //     default:
-        //         youSelected = "Please select a rating.";
-        // } 
+  function submitButton(selection) {
+    let byeStar = document.queryCommandValue('.star-container');
+    let byeHeader = document.querySelector('.header');
+    let byeCall = document.querySelector('.call');
+    let byeRating = document.querySelector('.button-flex')
+    let byeContent = [byeStar, byeHeader, byeCall, byeRating];
 
-        console.log(selection)
-    }
+    byeContent.forEach(option => {
+        console.log(option)
+    })
 
-    ratingSelection();
+    let showEnd = document.querySelector('.thank-you-state');    
+    let answer = document.querySelector(".you-selected").innerText;
+    let submitAnswer = document.querySelector(".submit-button");
 
-    let displayEverything = () => {
+    
 
-    }
-}
+    submitAnswer.addEventListener('click', function () {
+        if (selection) {
+            byeContent.forEach(selection => {
+            selection.style.visibility = 'hidden';
+            showEnd.style.visibility = 'visible';
+            answer = `You selected ${selection} out of 5`;
+            });
+        } else {
+            window.alert('Please help us by selecting a rating.')
+        }
+    })
+  } 
+};
 
 appRating();
