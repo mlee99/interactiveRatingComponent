@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Overpass';
+  src: url("/font/Overpass-VariableFont_wght.ttf") format("ttf"), url("/font/Overpass-VariableFont_wght.ttf") format("ttf");
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -24,52 +29,114 @@ img {
   height: auto;
 }
 
+html {
+  font-family: "Overpass", sans-serif;
+}
+
 body {
-  font-family: 'Overpass', sans-serif;
   color: white;
   background-color: #121417;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.5;
+  font-family: "Overpass", sans-serif;
 }
 
-.star-container img {
-  background-color: #7c8798;
-}
-
-.inner-text {
+.page-wrapper {
+  height: 400px;
+  width: 400px;
+  margin: 20% auto;
   background-color: #252d37;
-  width: 20em;
-  line-height: 1.3em;
-}
-
-.button_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5%;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  margin: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content > h2 {
+  margin-top: 40px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.content > p {
+  color: #7c8798;
+  font-weight: 400;
+}
+
+.star-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #7c8798;
+}
+
+.star-container,
+.rating {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.star-container > img {
+  margin: auto;
+}
+
+.button-flex {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.button_container button {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+.rating {
   background-color: #7c8798;
-  color: white;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
   outline: none;
 }
 
-.button_submit {
-  border: none;
-  color: white;
+.raing:hover {
+  background-color: #959eac;
+}
+
+.submit-button {
   background-color: #fb7413;
+  color: white;
+  border: none;
+  border-radius: 15%/100%;
+  margin-top: 25px;
+  padding: 10px 0;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+.thank-you-state {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

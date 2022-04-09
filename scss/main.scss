@@ -1,52 +1,95 @@
-@import './functions';
-@import './variables';
-@import './reset';
-@import './mixins';
+@import "./variables";
+@import "./reset";
+
+html {
+  font-family: $overPass;
+}
 
 body {
-    font-family: 'Overpass', sans-serif;
-    color: $white;
-    background-color: $veryDarkBlue;
+  color: $white;
+  background-color: $veryDarkBlue;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.5;
+  font-family: $overPass;
 }
 
 .page-wrapper {
-    background-color: $darkBlue;
-    width: 20em;
-    line-height: 1.3em;
-    position: relative;
+  height: 400px;
+  width: 400px;
+  margin: 20% auto;
+  background-color: $darkBlue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
 }
 
-.star-container img {
-    background-color: $lightGrey;
-}
-.inner-text {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-}
-
-.button_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.content {
+  position: relative;
+  height: 100%;
+  margin: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
-.button_container button {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: $lightGrey;
-    color: $white;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+.content > h2 {
+  margin-top: 40px;
+  font-weight: map-get($fontWeight, "bold");
+  letter-spacing: 0px;
 }
 
-.button_submit {
-    border: none;
-    color: $white;
-    background-color: $primary;
-    cursor: pointer;
+.content > p {
+  color: $mediumGrey;
+  font-weight: map-get($fontWeight, "regular");
+}
+
+.star-container {
+  display: flex;
+  align-items: center;
+  background-color: $mediumGrey;
+}
+
+.star-container,
+.rating {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.star-container > img {
+  margin: auto;
+}
+
+.button-flex {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  background-color: $mediumGrey;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.raing:hover {
+  background-color: $lightGrey;
+}
+
+.submit-button {
+  background-color: $primary;
+  color: $white;
+  border: none;
+  border-radius: 15%/100%;
+  margin-top: 25px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.thank-you-state {
+  display: none;
 }

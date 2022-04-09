@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url("/font/Overpass-VariableFont_wght.ttf") format("ttf"),
+         url("/font/Overpass-VariableFont_wght.ttf") format("ttf");
+};
+
+$overPass: 'Overpass', sans-serif;
 $primary: hsl(25,97%,53%);
 $white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
 $mediumGrey: hsl(216, 12%, 54%);
 $darkBlue: hsl(213, 19%, 18%);
 $veryDarkBlue: hsl(216, 12%, 8%);
@@ -7,3 +15,4 @@ $fontWeight: (
     "regular": 400,
     "bold": 700
 )
+

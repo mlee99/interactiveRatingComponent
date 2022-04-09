@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="./dist/css/main.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-<header></header>
- <div class="page-wrapper">
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+
+  <body>
     <!-- Rating state start -->
-   
-    <main>
 
-    <div class="inner-text">
-       <div class="star-container">
-       <img src="./images/icon-star.svg" alt="orange star image" class="star-icon">
-       </div>
+    <div class="page-wrapper">
       
-       <h3>How did we do?</h3>
+      <div class="content">
         
-        <p>
-          Please let us know how we did with your support request. All feedback is appreciated 
-          to help us improve our offering!
-        </p>
-      
-        <div class="button_container">
-          <button class="button_stlye" type="button">1</button>  
-          <button class="button_stlye" type="button">2</button>  
-          <button class="button_stlye" type="button">3</button>  
-          <button class="button_stlye" type="button">4</button>  
-          <button class="button_stlye" type="button">5</button>  
-        </div>
-      
-        <button class="button_submit" type="submit">Submit</button>
-      
+        <div class="star-container"><img src="./images/icon-star.svg" alt="Star within a circle"></div>
+        
+        <h2 class="header">How did we do?</h2>
+    
+          <p>
+            Please let us know how we did with your support request. All feedback is
+            appreciated to help us improve our offering!
+          </p>
+    
+    
+        
+          <div class="button-flex">
+            <button class="rating">1</button>
+            <button class="rating">2</button>
+            <button class="rating">3</button>
+            <button class="rating">4</button>
+            <button class="rating">5</button>
+          </div>
+
+          
+          <button class="submit-button">Submit</button>
+          
+        
+    
         <!-- Rating state end -->
-      
+    
         <!-- Thank you state start -->
+    
+        <div class="thank-you-state">
+          <p>
+            You selected
+            <!-- Add rating here -->
+            out of 5
+          </p>
       
-        <p>You selected <!-- Add rating here --> out of 5</p>
+          <p>Thank you!</p>
       
-        <p>Thank you!</p>
-      
-        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-          don’t hesitate to get in touch!</p>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need more
+            support, don’t hesitate to get in touch!
+        </div>
+        </p>
+    
+        <!-- Thank you state end -->
+    
+      </div>
+
     </div>
-  
-   </div>
-  </main>
-
-  <!-- Thank you state end -->
-
-
- <footer>
-    <div class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Marcus L</a>.</p>
-    </div>
- </footer>
-
-  <script src="./js/script.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
