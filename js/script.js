@@ -1,38 +1,52 @@
 const appRating = () => {
-  const btnSeleciton = () => {
-    let allBtns = document.querySelectorAll(".rating");
-    let lastBtn;
+  let ratingBtn = null;
 
-    allBtns.forEach((option) => {
+  const btnSeleciton = () => {
+    ratingBtn = document.querySelectorAll(".rating");
+    let lastBtn;
+    let answer = document.querySelector(".you-selected").innerText;
+
+    ratingBtn.forEach((option) => {
       option.addEventListener("click", function () {
         lastBtn && (lastBtn.style.backgroundColor = null);
         (lastBtn = option).style.backgroundColor = "hsl(25,97%,53%)";
         console.log(option.innerText);
+        ratingBtn = option.innerText;
+        // answer = `You selected ${ratingBtn} out of 5`;
+        // console.log(answer);
+        // return answer;
       });
+
+      submitButton(answer)
     });
 
-    submitButton(allBtns);
+
+    // submitButton(ratingBtn);
   };
 
   btnSeleciton();
 
   function submitButton(selection) {
-    let byeStar = document.queryCommandValue(".star");
+    let byeStar = document.querySelector(".star-container");
     let byeHeader = document.querySelector(".header");
     let byeCall = document.querySelector(".call");
     let byeRating = document.querySelector(".button-flex");
-    let byeContent = [byeStar, byeHeader, byeCall, byeRating];
-
-    byeContent.forEach((option) => {
-      console.log(option);
-    });
-
     let showEnd = document.querySelector(".thank-you-state");
     let answer = document.querySelector(".you-selected").innerText;
     let submitAnswer = document.querySelector(".submit-button");
+    let byeContent = [byeStar, byeHeader, byeCall, byeRating, submitAnswer];
+
+    // byeContent.forEach((option) => {
+    //   console.log(option);
+    // });
+
+
+    // submitAnswer.addEventListener("click", function () {
+    //   byeStar.style.display = 'None';
+    // })
 
     submitAnswer.addEventListener("click", function () {
-      if (selection) {
+      if (ratingBtn != null) {
         byeContent.forEach((selection) => {
           selection.style.display = "none";
           showEnd.style.display = "flex";
