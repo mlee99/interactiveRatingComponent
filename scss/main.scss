@@ -18,7 +18,7 @@ body {
 .page-wrapper {
   height: 400px;
   width: 400px;
-  margin: 20% auto;
+  margin: 10% auto;
   background-color: $darkBlue;
   display: flex;
   flex-direction: column;
@@ -99,17 +99,30 @@ body {
 }
 
 .thank-you-state {
+  height: 100%;
+  width: fit-content;
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.thank-you-state > img {
+  margin-bottom: 20px;
 }
 
 .you-selected {
     margin: auto;
-    width: 200px;
-    padding: 2px 0;
+    width: fit-content;
+    padding: 5px 15px;
     border-radius: 15%/100%;
     background-color: $circleColor;
     color: $primary;
+}
+
+.thanks {
+  font-weight: map-get($fontWeight, "bold");
+  font-size: 1.5em;
+  margin: 0;
 }
